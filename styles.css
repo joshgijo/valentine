@@ -1,0 +1,136 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background: url('images/wp8064649.webp') no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Edu AU VIC WA NT Arrows", serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5a3d5c;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Container */
+.container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Headline */
+.headline {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    font-family: "Edu AU VIC WA NT Arrows", serif;
+    color: #ff6f61;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Sevillana", serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#yesButton {
+    background-color: #ff6f61;
+    color: white;
+}
+
+#yesButton:hover {
+    background-color: #ff3b2f;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255, 111, 97, 0.3);
+}
+
+#noButton {
+    background-color: #6b5b95;
+    color: white;
+}
+
+#noButton:hover {
+    background-color: #4a3c6b;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(107, 91, 149, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Background Hearts */
+body::before, body::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff6f61;
+    border-radius: 50%;
+    opacity: 0.6;
+    z-index: -1;
+    animation: floatHearts 10s infinite;
+}
+
+body::before {
+    top: 10%;
+    left: 20%;
+    width: 30px;
+    height: 30px;
+    animation-duration: 8s;
+}
+
+body::after {
+    top: 50%;
+    right: 15%;
+    width: 25px;
+    height: 25px;
+    animation-duration: 12s;
+}
+
+@keyframes floatHearts {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(45deg);
+    }
+}

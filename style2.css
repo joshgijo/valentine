@@ -1,0 +1,99 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling with Background Image */
+body.journey {
+    font-family: 'Georgia', serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('images/wp2597418.webp'); /* Romantic background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Overlay to darken the background image */
+body.journey::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+    z-index: 1;
+}
+
+/* Container Styling */
+.container.journey {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    padding: 3rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Blur effect for elegance */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Headline Styling */
+.headline.journey {
+    font-family: 'Pacifico', cursive;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffd700; /* Gold color for elegance */
+    font-weight: normal;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+}
+
+/* Journey Text Styling */
+.journey-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+}
+
+/* Button Styling */
+button.journey {
+    background-color: #ff6f61; /* Coral color for a romantic touch */
+    color: #fff;
+    border: none;
+    padding: 1.2rem 3rem;
+    font-size: 1.3rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Georgia', serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+button.journey:hover {
+    background-color: #ff4a3d; /* Darker coral on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+button.journey:active {
+    background-color: #e63946; /* Even darker coral on click */
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
